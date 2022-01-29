@@ -4,8 +4,8 @@ function Validaion(){
     let email = document.getElementById('email').value;
 
     let usercheck = /^[A-Za-z ]{3,15}$/;
-    let emailcheck = /^[A-A-Za-z_]{3,}@[A-Za-z]{3,}[.]{1}[A-A-Za-z.]{2.6}$/;
     let mobilecheck = /^[789][0-9]{9}$/;
+    let emailcheck = /^[A-Za-z_]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
 
     if(usercheck.test(username)){
         document.getElementById("usererror").innerHTML=" ";
@@ -15,14 +15,6 @@ function Validaion(){
             return false;
         }
 
-    if (emailcheck.test(email)){
-        document.getElementById("emailerror").innerHTML= "";
-    }
-    else{
-        document.getElementById("emailerror").innerHTML = "** Email is Invalid";
-        return false;
-    }
-
     if (mobilecheck.test(mobile)){
         document.getElementById("mobileerror").innerHTML= "";
     }
@@ -31,5 +23,11 @@ function Validaion(){
 
         return false;
     }
+    if (emailcheck.test(email)){
+        document.getElementById("emailerror").innerHTML= "";
+    }
+    else{
+        document.getElementById("emailerror").innerHTML = "** Email is Invalid";
+        return false;
+    }
 }
-

@@ -5,7 +5,7 @@ function Validaion(){
 
     let usercheck = /^[A-Za-z ]{3,15}$/;
     let mobilecheck = /^[789][0-9]{9}$/;
-    let emailcheck = /^[A-Za-z_]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
+    let emailcheck = /^[A-Za-z_0-9]{3,}@[A-Za-z]{3,}[.]{1}[A-Za-z.]{2,6}$/;
 
     if(usercheck.test(username)){
         document.getElementById("usererror").innerHTML=" ";
